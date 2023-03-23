@@ -1,0 +1,239 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-image: linear-gradient(to top, #000000 0%, #0b0b0c 100%);
+  display: grid;
+  place-items: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+.container {
+  background-color: #b7b7b7;
+  padding: 30px;
+  display: flex;
+  border-radius: 10px;
+}
+.emoji {
+  background-color:#fff;
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  margin-right: 2rem;
+  padding: 16px;
+  position: relative;
+  transform: scale(1);
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+
+}
+
+.eyes {
+  margin-top: 6px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+.eyes .eye {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+.eyes .eye:before {
+  content: "";
+  min-width: 50%;
+  position: absolute;
+  min-height: 50%;
+  left: 50%;
+  top: 50%;
+  background-color: #000;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.verybad {
+  background-color: #ff613e;
+  position: relative;
+  overflow: hidden;
+}
+.verybad .eyebrow {
+  position: absolute;
+  height: 200px;
+  bottom: 68%;
+  left: -28px;
+  width: 150%;
+  border-radius: 50%;
+  background-color: #ff613e;
+  z-index: 2;
+}
+.verybad .eye:before {
+  width: 70%;
+  height: 70%;
+}
+.verybad .chins {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+.verybad .chins .chin {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e82b3c;
+  filter: blur(3px);
+}
+.verybad .smile {
+  width: 100%;
+  margin: 2px auto;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+.verybad .smile .curve {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  background-color: #94533f;
+  border-radius: 100%;
+}
+.verybad .smile .curve:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff613e;
+  border-radius: 50%;
+}
+
+.bad {
+  background-color: #32aae2;
+}
+.bad .smile {
+  width: 65%;
+  margin: auto;
+  height: 4px;
+  background-color: #1d6c90;
+  margin-top: 22px;
+  transform: rotate(-4deg);
+  border-radius: 16px;
+}
+
+
+.emoji.notbad {
+  background-color: #64c7b5;
+}
+.emoji.notbad .spects {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+}
+.emoji.notbad .spects .box {
+  width: 44px;
+  height: 52px;
+  border: 4px solid black;
+  display: inline-block;
+  border-radius: 4px;
+}
+.emoji.notbad .spects .box:before, .emoji.notbad .spects .box:after {
+  content: "";
+  width: 16px;
+  height: 4px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.emoji.notbad .spects .box:before {
+  right: 90%;
+}
+.emoji.notbad .spects .box:after {
+  left: 109%;
+}
+.emoji.notbad .eye {
+  overflow: hidden;
+}
+.emoji.notbad .eye:before {
+  width: 70%;
+  height: 70%;
+  top: -1px;
+  transform: unset;
+  left: 32%;
+}
+
+.good {
+  background-color: #fdc535;
+}
+.good .eye:before {
+  width: 70%;
+  height: 70%;
+}
+.good .chins {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+.good .chins .chin {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e08b93;
+  filter: blur(3px);
+}
+.good .smile {
+  width: 100%;
+  margin: 2px auto;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+.good .smile .happy {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  background-color: #ad5e46;
+  border-radius: 100%;
+}
+.good .smile .happy:before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fdc535;
+  border-radius: 50%;
+}
+
+
+.emoji:last-child {
+  margin-right: 0;
+}
+.emoji:hover {
+  transform: scale(1.3);
+}
+
+.emoji:hover ~ .emoji {
+  filter: blur(3px);
+}
